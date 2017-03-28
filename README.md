@@ -27,15 +27,15 @@ kafka-topics --list --zookeeper localhost:2181
 ```
 Adding Partitions
 ```
-kafka-topics --zookeeper localhost:2181/kafka-cluster --alter --topic my-topic --partitions 16
+kafka-topics --zookeeper localhost:2181 --alter --topic my-topic --partitions 16
 ```
 Deleting a Topic
 ```
-kafka-topics --zookeeper localhost:2181/kafka-cluster --delete --topic my-topic
+kafka-topics --zookeeper localhost:2181 --delete --topic my-topic
 ```
 Listing All Topics in a Cluster
 ```
-kafka-topics --zookeeper localhost:2181/kafka-cluster --list
+kafka-topics --zookeeper localhost:2181 --list
 ```
 Describing Topic Details
 ```
