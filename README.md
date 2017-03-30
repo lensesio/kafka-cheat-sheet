@@ -47,10 +47,15 @@ kafka-topics --zookeeper localhost:2181/kafka-cluster --describe --under-replica
 ```
 
 # Producers
-Produce messages to “my-topic”
+Produce messages standard input
 ```
 kafka-console-producer --broker-list localhost:9092 --topic my-topic
 ```
+Produce messages file
+```
+kafka-console-producer --broker-list localhost:9092 --topic test < messages.txt
+```
+
 
 # Consumers
 
