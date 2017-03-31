@@ -72,7 +72,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic  --max
 
 Consume 1 message from `__consumer_offsets`
 ```
-kafka-console-consumer --bootstrap-server broker2.cloud.landoop.com:9092 --topic __consumer_offsets --formatter 'kafka.coordinator.GroupMetadataManager$OffsetsMessageFormatter' --max-messages 1
+kafka-console-consumer --bootstrap-server localhost:9092 --topic __consumer_offsets --formatter 'kafka.coordinator.GroupMetadataManager$OffsetsMessageFormatter' --max-messages 1
 ```
 
 Consume, specify consumer group:
