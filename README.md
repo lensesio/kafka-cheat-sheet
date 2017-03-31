@@ -75,6 +75,11 @@ Consume 1 message from `__consumer_offsets`
 kafka-console-consumer --bootstrap-server broker2.cloud.landoop.com:9092 --topic __consumer_offsets --formatter 'kafka.coordinator.GroupMetadataManager$OffsetsMessageFormatter' --max-messages 1
 ```
 
+Consume, specify consumer group:
+```
+kafka-console-consumer --topic my-topic --new-consumer --bootstrap-server localhost:9092 --consumer-property group.id=my-group
+```
+
 ## Consume Avro messages
 ```
 kafka-avro-console-consumer --topic position-reports --new-consumer --bootstrap-server localhost:9092 --from-beginning --property schema.registry.url=localhost:8081 --max-messages 10
