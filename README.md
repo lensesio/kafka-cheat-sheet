@@ -120,6 +120,20 @@ Producer
 ```
 kafka-producer-perf-test --topic position-reports --throughput 10000 --record-size 300 --num-records 20000 --producer-props bootstrap.servers="localhost:9092"
 ```
+
+# ACLs
+```
+kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --add --allow-principal User:Bob --consumer --topic topicA --group groupA
+```
+
+```
+kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --add --allow-principal User:Bob --producer --topic topicA
+```
+List the ACLs
+```
+ kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --list --topic topicA
+```
+
 # Zookeeper 
 Enter zookeepr shell:
 ```
