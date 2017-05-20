@@ -55,7 +55,14 @@ Produce messages file
 ```
 kafka-console-producer --broker-list localhost:9092 --topic test < messages.txt
 ```
-
+Produce Avro messages
+```
+kafka-avro-console-producer --broker-list localhost:9092 --topic my.Topic --property value.schema='{"type":"record","name":"myrecord","fields":[{"name":"f1","type":"string"}]}' --property schema.registry.url=http://localhost:8081
+```
+And enter a few values from the console:
+```
+{"f1": "value1"}
+```
 
 # Consumers
 
