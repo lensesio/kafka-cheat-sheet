@@ -190,5 +190,5 @@ kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 --list --top
 You can enter the zookeeper shell as follows:
 
 ```
-zookeeper-shell localhost:2182 ls /
+zookeeper-shell localhost:2182 ls 
 ```
