@@ -96,9 +96,13 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic  --max
 ```
 
 You can consume a single message from `__consumer_offsets` as follows:
-
+* kafka version 0.9.x.x ~ 0.10.x.x*
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic __consumer_offsets --formatter 'kafka.coordinator.GroupMetadataManager$OffsetsMessageFormatter' --max-messages 1
+```
+* kafka version 0.11.x.x+ *
+```
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic __consumer_offsets --formatter "kafka.coordinator.group.GroupMetadataManager\$OffsetsMessageFormatter" --max-messages 1
 ```
 
 You can consume and specify a consumer group as follows:
